@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "website.copyandpaste.bottombarnavigationwith3fragments"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -22,12 +22,15 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
+
     //    https://github.com/ncapdevi/FragNav
-//    Library for managing multiple stacks of fragments
-    //    https://github.com/roughike/BottomBar
-//    Material design bottom navigation
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    //    Library for managing multiple stacks of fragments
     compile 'com.ncapdevi:frag-nav:1.0.3'
+
+    //    https://github.com/roughike/BottomBar
+    //    Material design bottom navigation
     compile 'com.roughike:bottom-bar:1.3.9'
-    compile 'com.android.support:support-v4:23.4.0'
 }
